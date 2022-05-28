@@ -1,0 +1,8 @@
+<ul class="social">
+{%- for icon in site.social -%}
+  <li>
+    <a href="{{ icon.url }}" alt="{{ icon.title }}" rel="noopener">
+      {%- include {{ icon.class | prepend: 'social/' | append: '.svg' }} -%}
+    </a></li>
+{%- endfor -%}
+</ul>

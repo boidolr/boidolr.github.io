@@ -1,0 +1,39 @@
+@import "defaults";
+
+html {
+  background: radial-gradient(var(--background-color), var(--muted-background-color));
+}
+
+body {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 1fr min-content;
+  margin: 0;
+}
+
+main {
+  margin: 20vh 2vh 0;
+}
+
+ul.social {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+  list-style: none;
+  padding: 0;
+
+  a {
+    color: var(--color);
+    font-size: 2em;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--muted-color)
+    }
+  }
+}
+
+footer {
+  color: var(--muted-color);
+}

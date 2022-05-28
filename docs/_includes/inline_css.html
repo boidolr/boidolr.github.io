@@ -1,0 +1,5 @@
+{% assign file_name=include.name %}
+{%- capture include_to_scssify -%}
+  @import "{{ file_name }}";
+{%- endcapture -%}
+<style type="text/css">{{ include_to_scssify | scssify }}</style>

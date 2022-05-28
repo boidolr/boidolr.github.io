@@ -1,0 +1,8 @@
+<footer>
+  <small>© {{ 'now' | date: "%Y" }}
+  {%- if site.author.name %}
+    {{ site.author.name | escape }}
+  {% endif -%}
+  </small>
+</footer>
+

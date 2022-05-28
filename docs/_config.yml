@@ -1,0 +1,65 @@
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+title: Raphael Boidol
+email: boidolr@users.noreply.github.com
+description: >-
+  Software consultant with a passion for automation.
+baseurl: ""
+url: "https://boidolr.github.io"
+github_username:  boidolr
+author:
+  name: Raphael Boidol
+  email: boidolr@users.noreply.github.com
+  tagline: Software consultant with a passion for automation.
+social:
+  - title: GitHub
+    class: github
+    url: https://github.com/boidolr
+  - title: Xing
+    class: xing
+    url: https://www.xing.com/profile/Raphael_Boidol/cv
+#  - title: LinkedIn
+#    class: linkedin
+#    url: https//linkedin.com/raphael-boidol
+
+markdown: GFM
+permalink: pretty
+livereload: true
+plugins:
+  # - jekyll-feed
+  # https://github.com/jekyll/github-metadata/blob/main/docs/site.github.md
+  - jekyll-github-metadata
+  # - jekyll-include-cache
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+whitelist:
+  # - jekyll-feed
+  - jekyll-github-metadata
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+sass:
+    sass_dir: _sass
+    style: compressed
+    sourcemap: development
+
+compress_html:
+  comments: all
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
