@@ -63,3 +63,5 @@ defaults:
       path: ""
     values:
       layout: "default"
+      light_theme: "#f2f2f2"
+      dark_theme: "#11191f"
