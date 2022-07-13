@@ -24,9 +24,9 @@ social:
   - title: Xing
     class: xing
     url: https://www.xing.com/profile/Raphael_Boidol/cv
-#  - title: LinkedIn
-#    class: linkedin
-#    url: https//linkedin.com/raphael-boidol
+  - title: LinkedIn
+    class: linkedin
+    url: https://www.linkedin.com/in/boidol
 
 markdown: GFM
 permalink: pretty
