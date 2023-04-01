@@ -12,7 +12,7 @@ description: >-
   Software consultant with a passion for automation.
 baseurl: ""
 url: "https://boidolr.github.io"
-github_username:  boidolr
+github_username: boidolr
 author:
   name: Raphael Boidol
   email: boidolr@users.noreply.github.com

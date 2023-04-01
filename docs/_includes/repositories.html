@@ -1,3 +1,5 @@
 {% for repository in site.github.public_repositories %}
-  * [{{ repository.name }}]({{ repository.html_url }})
+{% if repository.archived == false and repository.fork == false and ((repository.name contains "pre-commit") or (repository.private == true)) %}
+  * [{{ repository.name }}]({{ repository.html_url }}): {{ repository.description }}
+{% endif %}
 {% endfor %}
