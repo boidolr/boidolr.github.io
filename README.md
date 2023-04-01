@@ -21,5 +21,5 @@ bundle install
 ## Local testing
 
 ```
-bundle exec jekyll serve --safe
+JEKYLL_GITHUB_TOKEN="ghp_..." bundle exec jekyll serve --safe
 ```
