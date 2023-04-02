@@ -15,6 +15,14 @@ main {
   margin: 20vh 2vh 0;
 }
 
+a {
+    color: var(--color);
+
+    &:hover {
+      color: var(--muted-color)
+    }
+}
+
 ul.social {
   display: grid;
   justify-content: center;
@@ -24,13 +32,8 @@ ul.social {
   padding: 0;
 
   a {
-    color: var(--color);
     font-size: 2em;
     text-decoration: none;
-
-    &:hover {
-      color: var(--muted-color)
-    }
   }
 }
 
