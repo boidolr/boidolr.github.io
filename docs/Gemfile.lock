@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.2)
+    addressable (2.8.3)
       public_suffix (>= 2.0.2, < 6.0)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
@@ -37,9 +37,9 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
-    jekyll-github-metadata (2.15.0)
+    jekyll-github-metadata (2.16.0)
       jekyll (>= 3.4, < 5.0)
-      octokit (~> 4.0, != 4.4.0)
+      octokit (>= 4, < 7, != 4.4.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.0.0)
