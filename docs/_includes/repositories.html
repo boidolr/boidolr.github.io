@@ -1,6 +1,6 @@
 <ul class="repos">
 {%- for repository in site.github.public_repositories -%}
-{%- if repository.archived == false and repository.fork == false and ((repository.name contains "pre-commit") or (repository.private == true)) -%}
+{%- if repository.archived == false and repository.fork == false and ((repository.name contains "pre-commit") or (repository.name == "actions")) -%}
   <li><a href="{{ repository.html_url }}" alt="{{ epository.name }}" rel="noopener noreferrer">
       {{ repository.name -}}
     </a>: {{ repository.description }}</li>
