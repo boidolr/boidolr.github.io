@@ -92,18 +92,19 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-23
   x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   http_parser.rb (~> 0.8.0)
-  jekyll-github-metadata (~> 2.15)
+  jekyll-github-metadata (~> 2.16)
   jekyll-redirect-from (~> 0.16)
   jekyll-seo-tag (~> 2.8)
-  tzinfo (~> 2.0.0)
+  tzinfo (~> 2.0.6)
   tzinfo-data
   wdm (~> 0.1.1)
-  webrick (~> 1.7)
+  webrick (~> 1.8)
 
 BUNDLED WITH
-   2.3.14
+   2.5.9
