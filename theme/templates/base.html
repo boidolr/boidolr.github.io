@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+    <head>
+        {% block head %} {% include "head.html" %} {% endblock head %}
+    </head>
+    <body>
+        <main>{% block content %} {% endblock %}</main>
+        <footer>{% block footer %}{% include "footer.html" %}{% endblock %}</footer>
+    </body>
+</html>

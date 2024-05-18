@@ -1,0 +1,14 @@
+<ul class="social">
+    {%- for icon in SOCIAL_CONFIG -%}
+    <li>
+        <a
+            href="{{ icon.url }}"
+            alt="{{ icon.title }}"
+            aria-label="Link to {{ icon.title }}"
+            rel="noopener noreferrer me"
+        >
+            {%- include "static/images/social/{}.svg".format(icon.class) -%}
+        </a>
+    </li>
+    {%- endfor -%}
+</ul>

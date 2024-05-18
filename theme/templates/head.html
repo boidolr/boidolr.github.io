@@ -1,0 +1,12 @@
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{%- if THEME_CONFIG.light_theme -%}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="{{ THEME_CONFIG.light_theme }}" />
+{%- endif -%} {%- if THEME_CONFIG.dark_theme -%}
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="{{ THEME_CONFIG.dark_theme }}" />
+{%- endif -%}
+<title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+{% if SITESUBTITLE %}
+<meta name="description" content="{{ SITESUBTITLE }}" />
+{% endif %}

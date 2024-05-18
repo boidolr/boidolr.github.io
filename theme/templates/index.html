@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ AUTHOR }} | {{ TAGLINE }}
+{% endblock title %}
+{% block head %}
+{{ super() }}
+<style>
+    {% filter cssmin %}
+    {%- include "static/css/default.css" -%}
+    {%- include "static/css/main.css" -%}
+    {% endfilter %}
+</style>
+{% endblock head %}
+{% block content %}
+    <h1>{{ AUTHOR }}</h1>
+    <p>{{ TAGLINE }}</p>
+    {% include "social.html" %}
+    {% if github_projects %}
+    <p>Some of the packages that I created to simplify my workflow:</p>
+    {% include "repositories.html" %}
+    {% endif %}
+{% endblock content %}

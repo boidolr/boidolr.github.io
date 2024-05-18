@@ -1,9 +1,0 @@
-<ul class="repos">
-{%- for repository in site.github.public_repositories -%}
-{%- if repository.archived == false and repository.fork == false and ((repository.name contains "pre-commit") or (repository.name == "actions") or (repository.name == "cookiecutter")) -%}
-  <li><a href="{{ repository.html_url }}" alt="{{ repository.name }}" rel="noopener noreferrer">
-      {{ repository.name -}}
-    </a>: {{ repository.description }}</li>
-{%- endif -%}
-{%- endfor -%}
-</ul>

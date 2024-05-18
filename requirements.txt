@@ -1,0 +1,3 @@
+pelican[markdown]
+pelican-cssmin @ git+https://github.com/boidolr/pelican-cssmin@main
+pelican-jsmin @ git+https://github.com/boidolr/pelican-jsmin@main

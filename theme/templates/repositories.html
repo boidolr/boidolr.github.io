@@ -1,0 +1,11 @@
+{% if GITHUB_USER %}
+<ul class="repos">
+    {%- for repository in github_projects|selectattr("name", "repo_check") -%}
+    <li>
+        <a href="{{ repository.github_url }}" alt="{{ repository.name }}" rel="noopener noreferrer">
+            {{ repository.name -}} </a
+        >: {{ repository.description }}
+    </li>
+    {%- endfor -%}
+</ul>
+{% endif %}
