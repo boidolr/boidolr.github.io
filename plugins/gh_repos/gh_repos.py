@@ -1,4 +1,5 @@
-# Adapted from https://github.com/kura/pelican-githubprojects/blob/2ee75cdebde1c6e5a836e32bfb85a7e0207fe5a4/pelican_githubprojects/github.py
+# Adapted from
+# https://github.com/kura/pelican-githubprojects/blob/2ee75cdebde1c6e5a836e32bfb85a7e0207fe5a4/pelican_githubprojects/github.py
 # Copyright (c) 2014 Kura
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -74,13 +75,9 @@ def initialize(generator):
     if "GITHUB_USER" not in generator.settings:
         logger.warning("GITHUB_USER not set")
     else:
-        generator.plugin_instance = GithubProjects(generator)
-
-
-def fetch(generator, metadata):
-    generator.context["github_projects"] = generator.plugin_instance.process()
+        instance = GithubProjects(generator)
+        generator.context["github_projects"] = instance.process()
 
 
 def register():
     signals.article_generator_init.connect(initialize)
-    signals.article_generator_context.connect(fetch)
