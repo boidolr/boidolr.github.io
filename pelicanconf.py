@@ -2,7 +2,6 @@ import datetime
 
 
 AUTHOR = "Raphael Boidol"
-EMAIL = "boidolr@users.noreply.github.com"
 TAGLINE = "Software consultant with a passion for automation."
 SITENAME = AUTHOR
 SITEURL = ""
@@ -27,15 +26,14 @@ LINKS = ()
 # Social widget
 SOCIAL = ()
 
+DEFAULT_PAGINATION = False
+RELATIVE_URLS = True
+
 # Custom config
-PLUGIN_PATHS = ["plugins", "plugins/gh_repos"]
+GITHUB_USER = "boidolr"
+PLUGIN_PATHS = ["./plugins"]
 PLUGINS = ["gh_repos", "cssmin", "jsmin"]
 JINJA_GLOBALS = {"now": datetime.datetime.utcnow}
-GITHUB_USER = "boidolr"
-THEME_CONFIG = {
-    "light_theme": "#f2f2f2",
-    "dark_theme": "#11191f",
-}
 JINJA_TESTS = {
     "repo_check": lambda repo_name: any(
         (
@@ -43,6 +41,10 @@ JINJA_TESTS = {
             for part in ("actions", "cookiecutter", "pelican", "pre-commit")
         )
     )
+}
+THEME_CONFIG = {
+    "light_theme": "#f2f2f2",
+    "dark_theme": "#11191f",
 }
 SOCIAL_CONFIG = [
     {"title": "GitHub", "class": "github", "url": "https://github.com/boidolr"},
@@ -57,8 +59,3 @@ SOCIAL_CONFIG = [
         "url": "https://www.linkedin.com/in/boidol",
     },
 ]
-
-DEFAULT_PAGINATION = False
-
-# Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
