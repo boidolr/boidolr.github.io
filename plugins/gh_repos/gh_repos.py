@@ -30,7 +30,7 @@ from pelican import signals
 
 
 logger = logging.getLogger(__name__)
-GITHUB_API = "https://api.github.com/users/{username}/repos?type={user_type}&sort={sort_by}&direction={direction}"
+GITHUB_API = "https://api.github.com/users/{username}/repos?type={user_type}&sort={sort_by}&direction={direction}&per_page={per_page}"
 
 
 class GithubProjects(object):
@@ -46,7 +46,7 @@ class GithubProjects(object):
         )
 
         github_url = GITHUB_API.format(
-            username=username, user_type=user_type, sort_by=sort_by, direction=direction
+            username=username, user_type=user_type, sort_by=sort_by, direction=direction, per_page=100
         )
         try:
             with urlopen(github_url, timeout=2) as f:
