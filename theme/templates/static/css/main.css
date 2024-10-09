@@ -21,6 +21,10 @@ a {
     }
 }
 
+p.repos {
+    margin-block-start: 3em;
+}
+
 ul.social {
     display: grid;
     justify-content: center;
@@ -30,7 +34,7 @@ ul.social {
     padding: 0;
 
     a {
-        font-size: 2em;
+        font-size: 1.5em;
         text-decoration: none;
     }
 }

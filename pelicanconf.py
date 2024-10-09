@@ -1,8 +1,9 @@
 import datetime
 
 
+FIRSTNAME = "Raphael"
 AUTHOR = "Raphael Boidol"
-TAGLINE = "Software consultant with a passion for automation."
+TAGLINE = "I automate things."
 SITENAME = AUTHOR
 SITEURL = ""
 

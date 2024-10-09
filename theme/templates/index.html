@@ -12,11 +12,11 @@
 </style>
 {% endblock head %}
 {% block content %}
-    <h1>{{ AUTHOR }}</h1>
+    <h1>Hi! I'm {{ FIRSTNAME }}.</h1>
     <p>{{ TAGLINE }}</p>
     {% include "social.html" %}
     {% if github_projects %}
-    <p>Some of the packages that I created to simplify my workflow:</p>
+    <p class="repos">Some of the packages that I created to do that:</p>
     {% include "repositories.html" %}
     {% endif %}
 {% endblock content %}
