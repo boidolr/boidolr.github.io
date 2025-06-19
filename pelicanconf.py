@@ -39,7 +39,7 @@ JINJA_TESTS = {
     "repo_check": lambda repo_name: any(
         (
             part in repo_name
-            for part in ("actions", "cookiecutter", "pelican", "pre-commit")
+            for part in ("actions", "cookiecutter", "pelican", "pre-commit", "pytest")
         )
     )
 }
