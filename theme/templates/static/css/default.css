@@ -30,28 +30,28 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     color-scheme: light;
-    --background-color: #f2f2f2;
-    --muted-background-color: #e2e2e2;
+    --background-color: #4dbfb1;
+    --muted-background-color: #497587;
     --color: #000;
-    --muted-color: #666;
+    --muted-color: #497587;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
         color-scheme: dark;
-        --background-color: #11191f;
-        --muted-background-color: #11191f;
-        --color: hsl(205deg, 16%, 77%);
-        --muted-color: hsl(205deg, 10%, 50%);
+        --background-color: #497587;
+        --muted-background-color: #264653;
+        --color: #000;
+        --muted-color: #222;
     }
 }
 
 [data-theme="dark"] {
     color-scheme: dark;
-    --background-color: #11191f;
-    --muted-background-color: #11191f;
-    --color: hsl(205deg, 16%, 77%);
-    --muted-color: hsl(205deg, 10%, 50%);
+    --background-color: #497587;
+    --muted-background-color: #264653;
+    --color: #000;
+    --muted-color: #222;
 }
 
 @media (prefers-reduced-motion: no-preference) {
