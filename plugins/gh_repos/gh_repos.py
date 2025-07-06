@@ -20,9 +20,10 @@
 # SOFTWARE.
 import json
 import logging
+import os
 
 from urllib.request import HTTPError
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 
 
 from pelican import signals
@@ -44,11 +45,16 @@ class GithubProjects(object):
             "GITHUB_DIRECTION", "asc" if sort_by == "full_name" else "desc"
         )
 
+        headers = {}
+        if token := os.getenv("GITHUB_TOKEN"):
+            headers = {"Authorization": f"Bearer {token}"}
+
         github_url = GITHUB_API.format(
             username=username, user_type=user_type, sort_by=sort_by, direction=direction, per_page=100
         )
+        req = Request(github_url, headers=headers)
         try:
-            with urlopen(github_url, timeout=2) as f:
+            with urlopen(req, timeout=2) as f:
                 encoding = f.headers.get_content_charset()
                 response = f.read().decode(encoding)
         except HTTPError:
@@ -71,6 +77,9 @@ class GithubProjects(object):
 
 
 def initialize(generator):
+    if not os.getenv("GITHUB_TOKEN"):
+        logger.warning("GITHUB_TOKEN not set")
+
     if "GITHUB_USER" not in generator.settings:
         logger.warning("GITHUB_USER not set")
     else:
