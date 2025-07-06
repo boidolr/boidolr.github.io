@@ -34,7 +34,7 @@ RELATIVE_URLS = True
 GITHUB_USER = "boidolr"
 PLUGIN_PATHS = ["./plugins"]
 PLUGINS = ["gh_repos", "cssmin", "jsmin"]
-JINJA_GLOBALS = {"now": datetime.datetime.utcnow}
+JINJA_GLOBALS = {"now": lambda: datetime.datetime.now(datetime.UTC)}
 JINJA_TESTS = {
     "repo_check": lambda repo_name: any(
         (

@@ -20,7 +20,6 @@
 # SOFTWARE.
 import json
 import logging
-import os
 
 from urllib.request import HTTPError
 from urllib.request import urlopen
