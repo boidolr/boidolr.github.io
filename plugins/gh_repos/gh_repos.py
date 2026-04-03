@@ -45,7 +45,9 @@ class GithubProjects(object):
             "GITHUB_DIRECTION", "asc" if sort_by == "full_name" else "desc"
         )
 
-        headers = {}
+        headers = {
+            "X-GitHub-Api-Version": "2026-03-10",
+        }
         if token := os.getenv("GITHUB_TOKEN"):
             headers = {"Authorization": f"Bearer {token}"}
 
