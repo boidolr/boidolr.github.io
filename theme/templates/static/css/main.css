@@ -1,16 +1,12 @@
 html {
-    background: radial-gradient(var(--background-color), var(--muted-background-color));
+    background-color: var(--background-color);
 }
 
 body {
-    display: grid;
-    justify-items: center;
-    grid-template-rows: 1fr min-content;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     margin: 0;
-}
-
-main {
-    margin: 20vh 2vh 0;
 }
 
 a {
@@ -21,24 +17,172 @@ a {
     }
 }
 
-p.repos {
-    margin-block-start: 3em;
+/* Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--nav-border);
+    z-index: 100;
 }
 
-ul.social {
-    display: grid;
-    justify-content: center;
-    grid-auto-flow: column;
-    grid-column-gap: 10px;
-    list-style: none;
-    padding: 0;
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    a {
-        font-size: 1.5em;
-        text-decoration: none;
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--color);
+    font-size: 1rem;
+
+    &:hover {
+        color: var(--muted-color);
     }
 }
 
-footer {
+/* Main content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 6rem 0 4rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: 1.125rem;
     color: var(--muted-color);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+/* Social links */
+ul.social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        text-decoration: none;
+        color: var(--muted-color);
+        font-size: 0.95rem;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+
+    svg {
+        width: 1.2em;
+        height: 1.2em;
+        flex-shrink: 0;
+    }
+}
+
+/* Projects section */
+.projects {
+    padding: 3rem 0;
+}
+
+.projects h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem;
+}
+
+/* Repository cards */
+ul.repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        background: var(--card-background);
+        border: 1px solid var(--card-border);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .repo-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: block;
+        color: var(--color);
+    }
+
+    .repo-description {
+        color: var(--muted-color);
+        font-size: 0.9rem;
+        flex: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    a.view-project {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted-color);
+    font-size: 0.85rem;
 }

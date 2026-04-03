@@ -3,7 +3,9 @@ import datetime
 
 FIRSTNAME = "Raphael"
 AUTHOR = "Raphael Boidol"
-TAGLINE = "I automate things."
+SITE_DOMAIN = "boidol.dev"
+HERO_TITLE = "Crafting Digital Experiences"
+TAGLINE = "Passionate software engineer and designer specializing in building clean, efficient, and elegant digital solutions. Combining code and creativity to create meaningful user experiences. Based in the digital world."
 SITENAME = AUTHOR
 SITEURL = ""
 
@@ -49,11 +51,6 @@ THEME_CONFIG = {
 }
 SOCIAL_CONFIG = [
     {"title": "GitHub", "class": "github", "url": "https://github.com/boidolr"},
-    {
-        "title": "Xing",
-        "class": "xing",
-        "url": "https://www.xing.com/profile/Raphael_Boidol/cv",
-    },
     {
         "title": "LinkedIn",
         "class": "linkedin",

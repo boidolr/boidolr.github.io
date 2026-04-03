@@ -4,6 +4,18 @@
         {% block head %} {% include "head.html" %} {% endblock head %}
     </head>
     <body>
+        <header>
+            <nav>
+                <a href="{{ SITEURL }}/" class="logo-link">
+                    {%- include "static/images/logo.svg" -%}
+                    <span>{{ SITE_DOMAIN }}</span>
+                </a>
+                <ul>
+                    <li><a href="#projects" aria-label="View work and projects">Work</a></li>
+                    <li><a href="#contact" aria-label="Contact via social links">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
         <main>{% block content %} {% endblock %}</main>
         <footer>{% block footer %}{% include "footer.html" %}{% endblock %}</footer>
     </body>

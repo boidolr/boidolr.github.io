@@ -2,9 +2,9 @@
 <ul class="repos">
     {%- for repository in github_projects|selectattr("name", "repo_check") -%}
     <li>
-        <a href="{{ repository.github_url }}" alt="{{ repository.name }}" rel="noopener noreferrer">
-            {{ repository.name -}} </a
-        >: {{ repository.description }}
+        <span class="repo-name">{{ repository.name }}</span>
+        <span class="repo-description">{{ repository.description }}</span>
+        <a href="{{ repository.github_url }}" class="view-project" rel="noopener noreferrer">View Project</a>
     </li>
     {%- endfor -%}
 </ul>

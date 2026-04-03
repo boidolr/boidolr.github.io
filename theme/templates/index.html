@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}
-    {{ AUTHOR }} | {{ TAGLINE }}
+    {{ AUTHOR }} | {{ HERO_TITLE }}
 {% endblock title %}
 {% block head %}
 {{ super() }}
@@ -12,11 +12,15 @@
 </style>
 {% endblock head %}
 {% block content %}
-    <h1>Hi! I'm {{ FIRSTNAME }}.</h1>
-    <p>{{ TAGLINE }}</p>
-    {% include "social.html" %}
+    <section class="hero" id="contact">
+        <h1>{{ HERO_TITLE }}</h1>
+        <p>{{ TAGLINE }}</p>
+        {% include "social.html" %}
+    </section>
     {% if github_projects %}
-    <p class="repos">Some of the packages that I created to do that:</p>
-    {% include "repositories.html" %}
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        {% include "repositories.html" %}
+    </section>
     {% endif %}
 {% endblock content %}
