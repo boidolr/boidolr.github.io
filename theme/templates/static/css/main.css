@@ -1,5 +1,5 @@
 html {
-    background: radial-gradient(var(--background-color), var(--muted-background-color));
+    background: var(--background-color);
 }
 
 body {
@@ -7,10 +7,12 @@ body {
     justify-items: center;
     grid-template-rows: 1fr min-content;
     margin: 0;
+    color: var(--color);
 }
 
 main {
-    margin: 20vh 2vh 0;
+    width: min(100% - 2rem, 920px);
+    margin: clamp(7rem, 18vh, 12rem) auto 4rem;
 }
 
 a {
@@ -21,8 +23,23 @@ a {
     }
 }
 
-p.repos {
-    margin-block-start: 3em;
+.hero {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+.hero p {
+    margin: 1.4rem auto 0;
+    color: var(--muted-color);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
 }
 
 ul.social {
@@ -39,6 +56,71 @@ ul.social {
     }
 }
 
+ul.repos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: clamp(4rem, 12vh, 6rem) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.repos li {
+    display: flex;
+    flex-direction: column;
+    min-height: 8rem;
+    padding: 1.35rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.6rem;
+}
+
+ul.repos h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 650;
+    line-height: 1.2;
+}
+
+ul.repos p {
+    margin: 0.65rem 0 0;
+    color: var(--muted-color);
+}
+
+ul.repos .repo-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    color: #64748b;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+ul.repos .repo-link span {
+    display: inline-block;
+    margin-left: 0.25rem;
+    transition: transform 160ms ease;
+}
+
+ul.repos .repo-link:hover span {
+    transform: translateX(0.2rem);
+}
+
 footer {
     color: var(--muted-color);
+}
+
+@media (max-width: 760px) {
+    main {
+        margin-top: 5rem;
+    }
+
+    ul.repos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    ul.repos li {
+        min-height: 7rem;
+        padding: 1.15rem;
+    }
 }
