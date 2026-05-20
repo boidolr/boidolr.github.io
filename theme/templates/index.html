@@ -12,11 +12,12 @@
 </style>
 {% endblock head %}
 {% block content %}
-    <h1>Hi! I'm {{ FIRSTNAME }}.</h1>
-    <p>{{ TAGLINE }}</p>
-    {% include "social.html" %}
+    <section class="hero" aria-labelledby="intro-title">
+        <h1 id="intro-title">Hi! I'm {{ FIRSTNAME }}</h1>
+        <p>{{ TAGLINE }}</p>
+        {% include "social.html" %}
+    </section>
     {% if github_projects %}
-    <p class="repos">Some of the packages that I created to do that:</p>
     {% include "repositories.html" %}
     {% endif %}
 {% endblock content %}

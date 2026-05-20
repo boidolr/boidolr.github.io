@@ -30,28 +30,31 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     color-scheme: light;
-    --background-color: #5b8091;
-    --muted-background-color: #264653;
-    --color: #eee;
-    --muted-color: #ccc;
+    --background-color: #fff;
+    --muted-background-color: #f8fafc;
+    --color: #111827;
+    --muted-color: #6b7280;
+    --border-color: #e5e7eb;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        color-scheme: dark;
-        --background-color: #4f6f7d;
-        --muted-background-color: #264653;
-        --color: #000;
-        --muted-color: #222;
+        color-scheme: light;
+        --background-color: #fff;
+        --muted-background-color: #f8fafc;
+        --color: #111827;
+        --muted-color: #6b7280;
+        --border-color: #e5e7eb;
     }
 }
 
 [data-theme="dark"] {
-    color-scheme: dark;
-    --background-color: #4f6f7d;
-    --muted-background-color: #264653;
-    --color: #000;
-    --muted-color: #222;
+    color-scheme: light;
+    --background-color: #fff;
+    --muted-background-color: #f8fafc;
+    --color: #111827;
+    --muted-color: #6b7280;
+    --border-color: #e5e7eb;
 }
 
 @media (prefers-reduced-motion: no-preference) {
