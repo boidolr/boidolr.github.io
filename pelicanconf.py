@@ -50,11 +50,6 @@ THEME_CONFIG = {
 SOCIAL_CONFIG = [
     {"title": "GitHub", "class": "github", "url": "https://github.com/boidolr"},
     {
-        "title": "Xing",
-        "class": "xing",
-        "url": "https://www.xing.com/profile/Raphael_Boidol/cv",
-    },
-    {
         "title": "LinkedIn",
         "class": "linkedin",
         "url": "https://www.linkedin.com/in/boidol",
