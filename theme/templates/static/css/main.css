@@ -58,7 +58,7 @@ ul.social {
 
 ul.repos {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
     margin: clamp(4rem, 12vh, 6rem) 0 0;
     padding: 0;
